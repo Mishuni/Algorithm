@@ -34,6 +34,8 @@ public class Bj14891 {
 			st = new StringTokenizer(br.readLine());
 			int start = stoi(st.nextToken())-1;
 			int direc = stoi(st.nextToken());
+			
+			// 먼저 시작한 톱니바퀴 회전시키기
 			checkBetween();
 			rotate(wheels[start], direc);
 			// 0 1 2 3
@@ -100,6 +102,8 @@ public class Bj14891 {
 	public static int stoi(String s) {
 		return Integer.parseInt(s);
 	}
+	
+	// 톱니바퀴의 사이를 체크해서 영향을 받아 회전하는지 안하는지 확인
 	public static void checkBetween() {
 		for(int i=0; i<3; ++i) {
 			// 같으면 true
@@ -112,6 +116,7 @@ public class Bj14891 {
 		}
 	}
 	
+	// 톱니바퀴를 회전 시키는 함수
 	public static void rotate(LinkedList<Integer> wheel, int direc) {
 		// clock wise
 		if(direc==1) {
