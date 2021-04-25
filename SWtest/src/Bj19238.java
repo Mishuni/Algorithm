@@ -130,6 +130,9 @@ public class Bj19238 {
 			// choose a customer using bfs
 			int[] customer = bfs();
 			System.out.println(Arrays.toString(customer));
+			if(customer[2]==-1) {
+				break;
+			}
 			
 			// go to des using bfs
 			
